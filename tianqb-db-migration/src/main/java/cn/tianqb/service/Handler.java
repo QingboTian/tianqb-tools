@@ -5,7 +5,7 @@ package cn.tianqb.service;
  * @version 1.0
  * @date 2021/12/21 9:42
  */
-public interface MigrationHandler {
+public interface Handler {
 
     /**
      * 前置处理

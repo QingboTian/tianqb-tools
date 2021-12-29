@@ -5,6 +5,7 @@ import cn.tianqb.context.Context;
 import cn.tianqb.entity.DataSource;
 import cn.tianqb.entity.Entity;
 import cn.tianqb.handler.datasource.DataSourceParamCheckHandler;
+import cn.tianqb.service.AbstractMigrationHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,13 +24,6 @@ public class DataSourceController {
         Entity entity = new Entity();
         entity.setDataSource(dataSource);
         Context.set(entity);
-        getBean("apip").
-        new AbstractMigrationHandler.Builder()
-                .next(new DataSourceParamCheckHandler())
-                .next(new )
-                .next()
-                .build()
-                .run();
         return null;
     }
 

@@ -1,5 +1,6 @@
 package cn.tianqb.entity;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -11,8 +12,8 @@ import lombok.ToString;
  */
 @Getter
 @Setter
-@ToString
-public class DataSource {
+@ToString(callSuper = true)
+public class DataSource extends BaseEntity {
 
     private Integer type;
 
@@ -24,4 +25,24 @@ public class DataSource {
 
     private String driver;
 
+    @Getter
+    @AllArgsConstructor
+    public enum Type {
+
+        /**
+         * MYSQL
+         */
+        MYSQL(1, "mysql"),
+        /**
+         * elastic search v2
+         */
+        ES2(2, "es2"),
+        /**
+         * elastic search v6
+         */
+        ES6(6, "es6");
+
+        private Integer code;
+        private String alias;
+    }
 }

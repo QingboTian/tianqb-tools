@@ -1,5 +1,7 @@
 package cn.tianqb.constant;
 
+import cn.tianqb.entity.DataSource;
+
 import java.util.StringJoiner;
 
 /**
@@ -13,7 +15,9 @@ public class ExtConstant {
 
     final private static String SEPARATOR = ":";
 
-    final public static String DATA_SOURCE_MYSQL = DATA_SOURCE + SEPARATOR + "mysql";
+    final public static String DEFAULT = "default";
+
+    final public static String DATA_SOURCE_MYSQL = "mysql";
 
     public static String ext(String prefix, Object key) {
         StringJoiner sj = new StringJoiner(SEPARATOR);

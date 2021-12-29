@@ -26,6 +26,6 @@ public class DataSourceParamCheckHandler extends AbstractMigrationHandler {
 //        Assert.isEmpty(dataSource.getType(), "datasource type is null");
         ExtensionHolder
                 .getBean(DataSourceParamCheckExt.class, ExtConstant.ext(ExtConstant.DATA_SOURCE, dataSource.getType()))
-                .check();
+                .handler();
     }
 }

@@ -1,10 +1,12 @@
 import cn.tianqb.Application;
 import cn.tianqb.entity.DataSourceEntity;
 import cn.tianqb.entity.MigrationEntity;
+import cn.tianqb.pipe.Pipeline;
 import cn.tianqb.service.MigrationService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -21,7 +23,11 @@ import java.util.List;
 public class Test1 {
 
     @Autowired
-    public MigrationService migrationService;
+    private MigrationService migrationService;
+
+    @Autowired
+    @Qualifier("dataSourceCreatePipeline")
+    private Pipeline pipeline;
 
     @Test
     public void test1() {
@@ -38,6 +44,11 @@ public class Test1 {
         entity.setMapping(mapping);
         entity.setBatchSize(2);
         migrationService.run(entity);
+    }
+
+    @Test
+    public void test2() {
+        System.out.println();
     }
 
 }

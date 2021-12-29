@@ -1,6 +1,6 @@
 package cn.tianqb.pipe;
 
-import cn.tianqb.service.MigrationHandler;
+import cn.tianqb.ext.ExtensionPoint;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -17,6 +17,5 @@ import java.util.List;
 @ToString
 public class Pipeline {
 
-    private List<Class<MigrationHandler>> handler;
-
+    private List<Class<ExtensionPoint>> handler;
 }

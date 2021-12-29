@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.jd.framework.context.config.ContextAutoConfiguration
+cn.tianqb.common.extension.config.ContextAutoConfiguration
