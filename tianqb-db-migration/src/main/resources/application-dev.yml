@@ -5,10 +5,9 @@ spring:
       type: com.alibaba.druid.pool.DruidDataSource
       username: dev_user
       password: Yz2bAJWjtAyeTW4dx
-      url: jdbc:mysql://132.232.203.84:3306/dev?serverTimezone=UTC
+      url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC
     target:
       type: com.alibaba.druid.pool.DruidDataSource
       username: dev_user
-      password: Yz2bAJWjtAyeTW4d
-      url: jdbc:mysql://132.232.203.84:3306/dev?serverTimezone=UTC
-    driver-class-name:
+      password: Yz2bAJWjtAyeTW4dx
+      url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC

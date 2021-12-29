@@ -1,7 +1,7 @@
 package cn.tianqb.service;
 
 import cn.tianqb.entity.MigrationEntity;
-import cn.tianqb.utils.Assert;
+import cn.tianqb.common.utils.Assert;
 import lombok.extern.slf4j.Slf4j;
 
 /**

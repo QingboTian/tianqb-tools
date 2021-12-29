@@ -1,5 +1,9 @@
 package cn.tianqb.interceptor;
 
+import cn.tianqb.context.LoginContext;
+import cn.tianqb.ext.AuthServiceExt;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -10,14 +14,18 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author tianqingbo3
  * @version 1.0
- * @date 2021/12/20 16:46
+ * @date 2021/12/29 15:46
  */
+@Slf4j
 @Component
-public class DataSourceInterceptor implements HandlerInterceptor {
+public class AuthInterceptor implements HandlerInterceptor {
+
+    @Autowired
+    private AuthServiceExt authServiceExt;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        return false;
+        return authServiceExt.auth(request, response);
     }
 
     @Override
@@ -27,6 +35,6 @@ public class DataSourceInterceptor implements HandlerInterceptor {
 
     @Override
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
-
+        LoginContext.remove();
     }
 }

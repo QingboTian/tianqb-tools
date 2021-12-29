@@ -1,6 +1,6 @@
 package cn.tianqb.entity.datasource;
 
-import cn.tianqb.utils.Assert;
+import cn.tianqb.common.utils.Assert;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;

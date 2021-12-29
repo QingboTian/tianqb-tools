@@ -1,4 +1,4 @@
-package cn.tianqb.exception;
+package cn.tianqb.common.exception;
 
 /**
  * @author tianqingbo3

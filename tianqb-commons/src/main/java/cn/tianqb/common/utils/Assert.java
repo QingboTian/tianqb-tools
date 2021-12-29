@@ -1,6 +1,6 @@
-package cn.tianqb.utils;
+package cn.tianqb.common.utils;
 
-import cn.tianqb.exception.SystemException;
+import cn.tianqb.common.exception.SystemException;
 import org.springframework.http.HttpStatus;
 import org.springframework.lang.Nullable;
 import org.springframework.util.ObjectUtils;

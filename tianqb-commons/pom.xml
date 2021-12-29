@@ -9,18 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <packaging>war</packaging>
+    <artifactId>tianqb-commons</artifactId>
 
-    <artifactId>tianqb-db-migration</artifactId>
 
-    <dependencies>
-        <dependency>
-            <groupId>cn.tianqb</groupId>
-            <artifactId>tianqb-commons</artifactId>
-        </dependency>
-    </dependencies>
-
-    <build>
-        <finalName>tianqb-db-migration</finalName>
-    </build>
 </project>
