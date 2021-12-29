@@ -71,5 +71,11 @@
             <artifactId>guava</artifactId>
             <version>20.0</version>
         </dependency>
+        <dependency>
+            <groupId>com.jd.security.configsec</groupId>
+            <artifactId>spring-configsec-sdk</artifactId>
+            <version>1.0.3-SNAPSHOT</version>
+        </dependency>
     </dependencies>
+
 </project>
