@@ -32,7 +32,6 @@ public class MysqlDataSourceAuthExtImpl implements DataSourceAuthExt{
             Class.forName("com.mysql.jdbc.Driver");
             // 获取连接
             connection = DriverManager.getConnection(dataSource.getUrl(), dataSource.getUsername(), dataSource.getPassword());
-            connection.close();
         } catch (Exception e) {
             log.error("MYSQL连接失败", e);
             throw new SystemException(HttpStatus.UNAUTHORIZED.value(), "MYSQL连接失败");
