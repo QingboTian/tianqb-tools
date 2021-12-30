@@ -4,6 +4,7 @@ import cn.tianqb.common.extension.ExtensionHolder;
 import cn.tianqb.extension.ExtensionPoint;
 import cn.tianqb.extension.Pipeline;
 import cn.tianqb.migration.ext.sdk.constant.ExtConstant;
+import com.google.common.collect.Maps;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
@@ -11,10 +12,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.ObjectUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @Configuration
@@ -31,8 +29,8 @@ public class PipelineHelper implements ApplicationContextAware {
         // 获取业务身份上下文
         String biz = "mysql";
 
-        // 获取管道
-        HashMap<String, List<ExtensionPoint>> map = context.get(biz);
+        // 获取指定业务类型的管道列表
+        HashMap<String, List<ExtensionPoint>> map = context.getOrDefault(biz, Maps.newHashMap());
         List<ExtensionPoint> pipe;
         if (!ObjectUtils.isEmpty(map) && !ObjectUtils.isEmpty((pipe = map.get(key)))) {
             // 执行管道
@@ -40,11 +38,9 @@ public class PipelineHelper implements ApplicationContextAware {
             return;
         }
 
-        // 获取指定key的handler链表
+        // 获取指定业务类型的管道列表
         Pipeline pipeline = applicationContext.getBean(key, Pipeline.class);
         List<Class<ExtensionPoint>> list = pipeline.getHandler();
-
-        HashMap<String, List<ExtensionPoint>> map1 = new HashMap<>(16);
         List<ExtensionPoint> exts = new ArrayList<>();
         for (Class<ExtensionPoint> clazz : list) {
             // 此处从上下文获取扩展类key
@@ -55,9 +51,10 @@ public class PipelineHelper implements ApplicationContextAware {
             }
             exts.add(handler);
         }
-        map1.put(key, exts);
+        // 追加指定业务类型的管道
+        map.put(key, exts);
         // set context
-        context.putIfAbsent(biz, map1);
+        context.put(biz, map);
         start(exts);
     }
 
