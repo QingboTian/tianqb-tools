@@ -15,9 +15,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://132.232.203.84:3306/dev?serverTimezone=UTC
-    username: dev_user
-    password: Yz2bAJWjtAyeTW4d
+    url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC
+    username: root
+    password: 123456
     type: com.zaxxer.hikari.HikariDataSource
     hikari:
       connection-test-query: SELECT 1

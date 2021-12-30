@@ -59,10 +59,6 @@ public class Test1 {
     @Test
     public void test3() {
         DataSource dataSource = new DataSource();
-        dataSource.setUsername("dev_user");
-        dataSource.setPassword("Yz2bAJWjtAyeTW4d");
-        dataSource.setUrl("jdbc:mysql://132.232.203.84:3306/dev?serverTimezone=UTC");
-        dataSource.setDriver("com.mysql.jdbc.Driver");
         dataSourceController.create(dataSource);
     }
 }
