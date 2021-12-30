@@ -29,7 +29,7 @@ public class PipelineHelper implements ApplicationContextAware {
 
     public static void run(String key) {
         // 获取业务身份上下文
-        String biz = "";
+        String biz = "mysql";
 
         // 获取管道
         HashMap<String, List<ExtensionPoint>> map = context.get(biz);

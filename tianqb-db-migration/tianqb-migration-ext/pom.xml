@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>tianqb-migration-service</artifactId>
+    <artifactId>tianqb-migration-ext</artifactId>
 
     <dependencies>
         <dependency>
@@ -19,6 +19,10 @@
         <dependency>
             <groupId>cn.tianqb</groupId>
             <artifactId>tianqb-migration-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.tianqb</groupId>
+            <artifactId>tianqb-migration-dao</artifactId>
         </dependency>
     </dependencies>
 </project>

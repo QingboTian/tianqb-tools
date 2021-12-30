@@ -20,7 +20,7 @@ public class DataSourceController {
     @PostMapping
     public WebResult<Boolean> create(@RequestBody DataSource dataSource) {
         Context.set("dataSource", dataSource, DataSource.class);
-        PipelineHelper.run("cn.tianqb.migration.web.controller.DataSourceController.create");
+        PipelineHelper.run("cn.tianqb.migration.web.service.impl.DataSourceServiceImpl.create");
         return null;
     }
 

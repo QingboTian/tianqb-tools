@@ -1,4 +1,4 @@
-package tianqb.migration.ext.impl;
+package cn.tianqb.migration.ext.impl.defaul;
 
 import cn.tianqb.common.extension.annotation.Extension;
 import cn.tianqb.migration.domain.DataSource;

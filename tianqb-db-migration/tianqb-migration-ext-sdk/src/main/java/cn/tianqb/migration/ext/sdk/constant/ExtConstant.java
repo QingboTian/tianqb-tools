@@ -13,7 +13,7 @@ public class ExtConstant {
 
     final private static String SEPARATOR = ":";
 
-    final public static String DEFAULT = "default";
+    final public static String DEFAULT = "defaul";
 
     final public static String DATA_SOURCE_MYSQL = "mysql";
 

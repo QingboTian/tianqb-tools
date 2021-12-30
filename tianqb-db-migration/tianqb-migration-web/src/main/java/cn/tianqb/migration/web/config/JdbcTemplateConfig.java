@@ -1,8 +1,7 @@
-package cn.tianqb.config;
+package cn.tianqb.migration.web.config;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -12,7 +11,7 @@ import javax.sql.DataSource;
  * @version 1.0
  * @date 2021/12/20 14:11
  */
-@Configuration
+//@Configuration
 public class JdbcTemplateConfig {
 
     @Bean

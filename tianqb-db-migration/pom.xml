@@ -15,6 +15,7 @@
         <module>tianqb-migration-web</module>
         <module>tianqb-migration-ext</module>
         <module>tianqb-migration-domain</module>
+        <module>tianqb-migration-dao</module>
     </modules>
 
     <artifactId>tianqb-db-migration</artifactId>
@@ -30,6 +31,31 @@
                 <groupId>cn.tianqb</groupId>
                 <artifactId>tianqb-migration-domain</artifactId>
                 <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.tianqb</groupId>
+                <artifactId>tianqb-migration-dao</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.tianqb</groupId>
+                <artifactId>tianqb-migration-ext</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper</artifactId>
+                <version>4.0.4</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>1.2.5</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

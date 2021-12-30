@@ -1,5 +1,6 @@
-package cn.tianqb.common.exception;
+package cn.tianqb.migration.web.controller;
 
+import cn.tianqb.common.exception.SystemException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

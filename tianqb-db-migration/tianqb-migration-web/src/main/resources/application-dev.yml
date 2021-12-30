@@ -1,13 +1,45 @@
 #数据源1
+#spring:
+#  datasource:
+#    source:
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      username: dev_user
+#      password: Yz2bAJWjtAyeTW4dx
+#      url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC
+#    target:
+#      type: com.alibaba.druid.pool.DruidDataSource
+#      username: dev_user
+#      password: Yz2bAJWjtAyeTW4dx
+#      url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC
+
 spring:
   datasource:
-    source:
-      type: com.alibaba.druid.pool.DruidDataSource
-      username: dev_user
-      password: Yz2bAJWjtAyeTW4dx
-      url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC
-    target:
-      type: com.alibaba.druid.pool.DruidDataSource
-      username: dev_user
-      password: Yz2bAJWjtAyeTW4dx
-      url: jdbc:mysql://127.0.0.1:3306/dev?serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://132.232.203.84:3306/dev?serverTimezone=UTC
+    username: dev_user
+    password: Yz2bAJWjtAyeTW4d
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      connection-test-query: SELECT 1
+      max-lifetime: 1800000
+      maximum-pool-size: 50
+      connection-timeout: 30000
+      minimum-idle: 10
+      idle-timeout: 60000
+      auto-commit: true
+      pool-name: HikariCP
+
+# MYBATIS
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    mapUnderscoreToCamelCase: true
+mapper:
+  mappers: tk.mybatis.mapper.common.Mapper
+  not-empty: true
+  identity: MYSQL
+pagehelper:
+  helperDialect: mysql
+  reasonable: false
+  supportMethodsArguments: true
+  params: count=countSql

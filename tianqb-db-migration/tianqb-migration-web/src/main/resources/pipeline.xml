@@ -4,21 +4,14 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
-    <bean class="cn.tianqb.extension.Pipeline" id="cn.tianqb.migration.web.controller.DataSourceController.create">
+    <!--管道配置-->
+    <bean class="cn.tianqb.extension.Pipeline" id="cn.tianqb.migration.web.service.impl.DataSourceServiceImpl.create">
         <property name="handler">
             <list>
                 <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamCheckExt</value>
                 <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamInitExt</value>
-            </list>
-        </property>
-    </bean>
-
-    <bean class="cn.tianqb.extension.Pipeline" id="dataSourceCreatePipeline2">
-        <property name="handler">
-            <list>
-                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamCheckExt</value>
-                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamInitExt</value>
+                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceAuthExt</value>
+                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourcePersistentExt</value>
             </list>
         </property>
     </bean>

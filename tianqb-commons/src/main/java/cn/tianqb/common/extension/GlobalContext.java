@@ -40,6 +40,14 @@ public class GlobalContext extends AbstractContext<Class<?>, ExtensionContext> {
      * @return
      */
     public <T, K> T getExtBeanByKey(Class<T> tClass, K key) {
-        return tClass.cast(this.get(tClass).get(key));
+        ExtensionContext extensionContext = this.get(tClass);
+        if (extensionContext == null) {
+            return null;
+        }
+        Object res = extensionContext.get(key);
+        if (res == null) {
+            return null;
+        }
+        return tClass.cast(res);
     }
 }

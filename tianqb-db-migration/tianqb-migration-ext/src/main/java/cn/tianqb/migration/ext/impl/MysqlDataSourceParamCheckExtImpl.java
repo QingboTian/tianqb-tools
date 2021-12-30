@@ -1,4 +1,4 @@
-package tianqb.migration.ext.impl;
+package cn.tianqb.migration.ext.impl;
 
 import cn.tianqb.common.extension.annotation.Extension;
 import cn.tianqb.common.utils.Assert;
