@@ -17,6 +17,7 @@
     <modules>
         <module>tianqb-db-migration</module>
         <module>tianqb-commons</module>
+        <module>tianqb-extension</module>
     </modules>
 
     <developers>
@@ -28,6 +29,8 @@
 
     <properties>
         <tianqb.commons.version>1.0-SNAPSHOT</tianqb.commons.version>
+        <tianqb.extension.version>1.0-SNAPSHOT</tianqb.extension.version>
+        <tianqb.migration.sdk.version>1.0-SNAPSHOT</tianqb.migration.sdk.version>
     </properties>
 
     <dependencyManagement>
@@ -36,6 +39,16 @@
                 <groupId>cn.tianqb</groupId>
                 <artifactId>tianqb-commons</artifactId>
                 <version>${tianqb.commons.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.tianqb</groupId>
+                <artifactId>tianqb-extension</artifactId>
+                <version>${tianqb.extension.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.tianqb</groupId>
+                <artifactId>tianqb-migration-ext-sdk</artifactId>
+                <version>${tianqb.migration.sdk.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

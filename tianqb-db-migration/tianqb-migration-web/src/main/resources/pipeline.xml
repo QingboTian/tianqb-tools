@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean class="cn.tianqb.extension.Pipeline" id="cn.tianqb.migration.web.controller.DataSourceController.create">
+        <property name="handler">
+            <list>
+                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamCheckExt</value>
+                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamInitExt</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="cn.tianqb.extension.Pipeline" id="dataSourceCreatePipeline2">
+        <property name="handler">
+            <list>
+                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamCheckExt</value>
+                <value>cn.tianqb.migration.ext.sdk.datasource.DataSourceParamInitExt</value>
+            </list>
+        </property>
+    </bean>
+
+</beans>
