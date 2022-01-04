@@ -18,7 +18,7 @@
         <module>tianqb-migration-dao</module>
     </modules>
 
-    <artifactId>tianqb-db-migration</artifactId>
+    <artifactId>tianqb-data-migration</artifactId>
 
     <dependencyManagement>
         <dependencies>
